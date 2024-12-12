@@ -61,6 +61,8 @@ export const getAllNewProducts = createAsyncThunk(
         },
       });
     //   console.log(response)
+    console.log(payload);
+
       if(response.status){
         const data = await response.json();
       dispatch(

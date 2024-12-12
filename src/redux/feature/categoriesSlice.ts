@@ -60,7 +60,7 @@ export const getAllcategories = createAsyncThunk(
           "Content-type": "application/json; charset=UTF-8",
         },
       });
-      console.log(payload)
+      console.log(payload);
       console.log(response);
       if (response.status) {
         const data = await response.json();
