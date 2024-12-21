@@ -2,13 +2,15 @@ import { configureStore } from '@reduxjs/toolkit';
 import newProductSlice from '../feature/newProductSlice';
 import categoriesSlice from '../feature/categoriesSlice';
 import loaderSlice from '../feature/loaderSlice';
+import authSlice from '../feature/authSlice';
 
 const store = configureStore({
   reducer: {
     // Add your reducers here
     newProduct:newProductSlice,
         categories:categoriesSlice,
-        loader:loaderSlice
+        loader:loaderSlice,
+        auth:authSlice
   },
 });
 

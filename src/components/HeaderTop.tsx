@@ -1,5 +1,15 @@
+import { useEffect, useState } from "react";
 import { BsFacebook, BsTwitter, BsInstagram, BsYoutube } from "react-icons/bs";
 const HeaderTop = () => {
+  const [name,setName]=useState<string>("");
+  const token = localStorage.getItem("accessToken");
+  const user:any = localStorage.getItem("User");
+  console.log(user)
+  useEffect(()=>{
+    if(token!==null){
+      setName(JSON.parse(user).name)
+    }
+  },[token]);
   return (
     <div className="border-b border-gray-200 hidden sm:block">
       <div className="container py-4">
@@ -21,7 +31,11 @@ const HeaderTop = () => {
           <div className="text-gray-500 text-[12px]">
             <b>FREE SHIPPING</b> THIS WEEK ORDER OVER - &#8377;500.
           </div>
+          
           <div className="flex gap-4">
+          {
+            token&&<div className="text-gray-500">{name}</div>
+          }
             <select
               className="text-gray-500 text-[12px] w-[70px]"
               name="currency"

@@ -86,12 +86,12 @@ const ProductCard: React.FC<propType> = ({
   };
   return (
     <div
-      className="px-4 border border-gray-200 rounded-xl max-w-[400px] hover:scale-105 transition-transform duration-200 hover:shadow-lg cursor-pointer"
+      className="px-4 border border-gray-200 bg-white rounded-xl max-w-[400px] hover:scale-105 transition-transform duration-200 hover:shadow-lg cursor-pointer"
       onClick={() => routeToProductDetails(id)}
     >
       <div className="flex justify-center items-center">
         <img
-          className="w-[200px] h-[300px] object-contain"
+          className="w-[200px] h-[300px] object-contain "
           src={image}
           width={200}
           height={300}

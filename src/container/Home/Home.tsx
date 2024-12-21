@@ -3,6 +3,7 @@ import ProductCard from '../../components/ProductCard';
 import { useAppDispatch, useAppSelector } from '../../custom-hooks/reduxHook';
 import { getAllNewProducts } from '../../redux/feature/newProductSlice';
 import { RootState } from '../../redux/store/store';
+import { clearAuthState } from '../../redux/feature/authSlice';
 
 // Define the Rating and Product interfaces
 interface Rating {
@@ -33,7 +34,7 @@ const Home:React.FC = () => {
   useEffect(() => {
     // getProducts();
     dispatch(getAllNewProducts())
-    
+    dispatch(clearAuthState());
   }, [dispatch]);
 
   return (
