@@ -69,9 +69,10 @@ export const loginWithEmail = (email: string, password: string) => async (dispat
 };
 
 // Firebase register with email and password
-export const registerWithEmail = (email: string, password: string,firstName:string,lastName:string,mobileNumber:number) => async (dispatch: any) => {
+export const registerWithEmail = (email: string, password: string,firstName:string,lastName:string,mobileNumber:string) => async (dispatch: any) => {
   dispatch(setLoading(true));
   try {
+    console.log(mobileNumber)
     const result = await createUserWithEmailAndPassword(auth, email, password);
 
     const user = result.user;

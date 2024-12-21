@@ -8,7 +8,7 @@ import logo from '../../assets/logo_transparent.png';
 const Login: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { user, loading, error, isNavigate } = useAppSelector((state: RootState) => state.auth);
+  const {  loading, error, isNavigate } = useAppSelector((state: RootState) => state.auth);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

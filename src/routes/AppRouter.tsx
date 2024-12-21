@@ -16,7 +16,7 @@ import { RootState } from '../redux/store/store'
 
 
 const AppRouter:React.FC = () => {
-  const {user}=useAppSelector((state:RootState)=>state.auth);
+  const user:any=useAppSelector((state:RootState)=>state.auth.user);
   useEffect(() => {
     if (user) {
       console.log(user)
